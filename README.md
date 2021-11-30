@@ -1,2 +1,2 @@
-# monty
-Stacks, Queues
+# 0x19. C - Stacks, Queues - LIFO, FIFO
+

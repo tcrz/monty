@@ -38,11 +38,15 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+int delete_dnodeint_at_index(stack_t **head, unsigned int index);
+
 void (*get_func(char *str))(stack_t **, unsigned int);
+
 void push_func(stack_t **h, unsigned int line_number);
 void pall_func(stack_t **h, unsigned int line_number);
 void nop_func(stack_t **h, unsigned int line_number);
 void pint_func(stack_t **h, unsigned int line_number);
+void pop_func(stack_t **stack, unsigned int line_number);
 
 
 #endif

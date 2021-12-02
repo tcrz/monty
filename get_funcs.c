@@ -14,6 +14,7 @@ void (*get_func(char *str))(stack_t **, unsigned int)
 		{"pall", pall_func},
 		{"pint", pint_func},
 		{"nop", nop_func},
+		{"pop", pop_func},
 		{NULL, NULL}};
 
 	i = 0;

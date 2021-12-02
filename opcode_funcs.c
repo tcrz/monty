@@ -93,9 +93,14 @@ void pint_func(stack_t **h, unsigned int line_number)
 	printf("%d\n", head->n);
 }
 
-void pop_func(stack_t **stack, unsigned int line_number)
+/**
+ * pop_func - removes the element on top
+ * @h: pointer to stack_t object
+ * @line_number: line number in file
+ */
+void pop_func(stack_t **h, unsigned int line_number)
 {
-	stack_t *temp = *stack;
+	stack_t *temp = *h;
 
 	if (!temp)
 	{
@@ -103,7 +108,7 @@ void pop_func(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	delete_dnodeint_at_index(stack, 0);
+	delete_dnodeint_at_index(h, 0);
 }
 
 /**
@@ -116,14 +121,13 @@ void swap_func(stack_t **h, unsigned int line_number)
 	stack_t *temp = *h, *node = NULL;
 	int num;
 
-	
 	if (dlistint_len(*h) < 2)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	
-	(void) line_number;
+
+	(void)line_number;
 	temp = get_dnodeint_at_index(*h, 0);
 	num = temp->n;
 	delete_dnodeint_at_index(h, 0);

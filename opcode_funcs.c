@@ -86,7 +86,7 @@ void pint_func(stack_t **h, unsigned int line_number)
 
 	if (!head)
 	{
-		fprintf(stderr, "L%d: can't pint, stack empty", line_number);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 

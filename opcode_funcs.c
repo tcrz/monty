@@ -105,3 +105,30 @@ void pop_func(stack_t **stack, unsigned int line_number)
 
 	delete_dnodeint_at_index(stack, 0);
 }
+
+/**
+ * swap_handler - handles the swap instruction
+ * @stack: double pointer to the stack to push to
+ * @line_number: number of the line in the file
+ */
+void swap_func(stack_t **h, unsigned int line_number)
+{
+	stack_t *temp = *h, *node = NULL;
+	int num;
+
+	if (dlistint_len(*h) < 2)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	temp = get_dnodeint_at_index(*h, 0);
+	num = temp->n;
+	delete_dnodeint_at_index(h, 0);
+	node = insert_dnodeint_at_index(h, 1, num);
+	if (!node)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
+}

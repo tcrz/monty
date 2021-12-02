@@ -74,3 +74,21 @@ void nop_func(stack_t **h, unsigned int line_number)
 	(void)*h;
 	(void)line_number;
 }
+
+/**
+ * pint_func - prints the element on top
+ * @h: pointer to stack_t object
+ * @line_number: line number in file
+ */
+void pint_func(stack_t **h, unsigned int line_number)
+{
+	stack_t *head = *h;
+
+	if (!head)
+	{
+		fprintf(stderr, "L%d: can't pint, stack empty", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	printf("%d\n", head->n);
+}

@@ -49,6 +49,7 @@ stack_t *insert_dnodeint_at_index(stack_t **h, unsigned int idx, int n);
 stack_t *add_dnodeint_end(stack_t **head, const int n);
 
 
+
 void (*get_func(char *str))(stack_t **, unsigned int);
 
 
@@ -59,6 +60,8 @@ void pint_func(stack_t **h, unsigned int line_number);
 void pop_func(stack_t **stack, unsigned int line_number);
 void swap_func(stack_t **stack, unsigned int line_number);
 void add_func(stack_t **h, unsigned int line_number);
-
+void sub_func(stack_t **h, unsigned int line_number);
+void div_func(stack_t **h, unsigned int line_number);
+void mul_func(stack_t **h, unsigned int line_number);
 
 #endif

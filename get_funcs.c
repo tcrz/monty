@@ -12,6 +12,7 @@ void (*get_func(char *str))(stack_t **, unsigned int)
 	instruction_t ops_func[] = {
 		{"push", push_func},
 		{"pall", pall_func},
+		{"nop", nop_func},
 		{NULL, NULL}};
 
 	i = 0;

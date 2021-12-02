@@ -63,3 +63,14 @@ void pall_func(stack_t **h, unsigned int line_number)
 		(*h) = (*h)->next;
 	}
 }
+
+/**
+ * nop_func - pushes element onto the stack
+ * @h: pointer to stack_t object
+ * @line_number: line number in file
+ */
+void nop_func(stack_t **h, unsigned int line_number)
+{
+	(void)*h;
+	(void)line_number;
+}

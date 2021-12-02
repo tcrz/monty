@@ -41,11 +41,10 @@ char **split_str(char *buf)
 int main(int argc, char *argv[])
 {
 	FILE *fp;
-	char *filename, *line = NULL;
+	char *filename, *line = NULL, **fileargs;
 	ssize_t linesize;
 	int linecount = 0;
 	size_t len = 0;
-	char **fileargs;
 	stack_t *h = NULL;
 	void (*func)(stack_t **, unsigned int line_number);
 
